@@ -31,7 +31,12 @@ const without = function(source, itemsToRemove) {
   return result;
 };
 
-
+// Ai Feedback Inputted
 
 without([1, 2, 3], [1]); // => [2, 3]
 without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => should PASS
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => should PASS
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); // no need to capture return value for this test case
+assertArraysEqual(words, ["hello", "world", "lighthouse"]); // => should PASS
