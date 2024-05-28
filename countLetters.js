@@ -7,17 +7,20 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(string) {
-  let lettersOnly = string.split(" ").join('');
   let results = {};
-  for (let letter of lettersOnly) {
-    if (results[letter]) {
-      results[letter] += 1;
-    } else {
-      results[letter] = 1;
+  for (let letter of string) {
+    if (letter !== ' ') {
+      if (results[letter]) {
+        results[letter] += 1;
+      } else {
+        results[letter] = 1;
+      }
     }
   }
   return results;
 };
+
+
 
 const result = countLetters("better");
 
