@@ -22,20 +22,19 @@ const eqArrays = function(array1, array2) {
 };
 
 const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    let letter = sentence[i];
-    if (letter !== ' ') {
-      if (results[letter]) {
-        results[letter].push(i);
-      } else {
-        results[letter] = [i];
+  const results = {}; // Initialize an empty object to store the results
+  for (let i = 0; i < sentence.length; i++) { // Loop through each character in the sentence
+    let letter = sentence[i]; // Store the current character in a variable
+    if (letter !== ' ') { // If the character is not a space...
+      if (results[letter]) { // If the character already exists as a key in the results object...
+        results[letter].push(i); // ...add the current index to its array
+      } else { // If the character does not exist as a key in the results object...
+        results[letter] = [i]; // ...create a new array for it and add the current index
       }
     }
   }
-  return results;
+  return results; // Return the results object
 };
-
 
 const testResults = letterPositions("lighthouse in the house");
 
