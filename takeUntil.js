@@ -36,6 +36,8 @@ const assertArraysEqual = function(arr1, arr2) {
 const data1 = [13, 24, 5642, 76, 23, 431, 264, -4654, 52];
 const results1 = takeUntil(data1, x => x < 0);
 console.log(results1);
+assertArraysEqual(results1, [13, 24, 5642, 76, 23, 431, 264]);
+
 
 console.log('---');
 
