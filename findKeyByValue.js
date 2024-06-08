@@ -6,17 +6,17 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKeyByValue = function(object, value) { // creating a function findKeyByValue which takes in the parameters object and value
-  for (const key of Object.keys(object)) { // initiates a loop to search throgh all the object keys
+const findKeyByValue = function(object, value) {
+  for (const key of Object.keys(object)) {
     if (object[key] === value) {
-      return key; // returns key if match found
+      return key;
     }
   }
-  return undefined; // returns undefined if no key is found
+  return undefined;
 };
 
 const bestTVShowsByGenre = {
-  sciFi: "The Expanse", // initial test code was not camelCase (sci_fi)
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire",
 };
